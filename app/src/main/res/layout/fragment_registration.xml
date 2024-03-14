@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.registration.RegistrationFragment">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Почта"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                android:id="@+id/clientEmail" />
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Пароль"
+                android:textSize="20sp"
+                android:inputType="textPassword"
+                android:id="@+id/clientPassword"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Имя"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:id="@+id/clientFname"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Фамилия"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:id="@+id/clientLname"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Отчество (опционально)"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:id="@+id/clientMname"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Телефон"
+                android:textSize="20sp"
+                android:inputType="phone"
+                android:id="@+id/clientPhone"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Адрес"
+                android:textSize="20sp"
+                android:inputType="textPostalAddress"
+                android:id="@+id/clientAddress"
+                android:layout_marginBottom="15dp"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Зарегистрироваться"
+                android:textSize="20sp"
+                android:id="@+id/btnRegister" />
+
+    </TableLayout>
+
+</FrameLayout>

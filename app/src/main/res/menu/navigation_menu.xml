@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item android:id="@+id/homeFragment"
+          android:title="Домашняя страница"
+          android:icon="@drawable/baseline_bungalow_24"/>
+
+    <item android:id="@+id/cartFragment"
+          android:title="Корзина"
+          android:icon="@drawable/baseline_add_shopping_cart_24"/>
+
+</menu>

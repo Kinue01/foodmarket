@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Foodmarket" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primaryColorGreen</item>
+        <item name="buttonStyle">@style/Buton.Borderless.Colored</item>
+    </style>
+
+    <style name="Theme.Foodmarket" parent="AppTheme.GREEN"/>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorGreen">
+
+    <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/acc_bg"
+            android:src="@drawable/baseline_boy_24"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:id="@+id/sidebar_name"
+            android:textColor="@color/primaryTextColorGreen"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/sidebar_email"
+            android:text="email"
+            android:textColor="@color/primaryTextColorGreen"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="30dp"/>
+
+</LinearLayout>

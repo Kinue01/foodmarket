@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+              android:name="com.tverd.foodmarket.presentation.home.HomeFragment"
+              android:label="Домашняя страница"
+              tools:layout="@layout/fragment_home">
+
+        <action
+                android:id="@+id/action_homeFragment_to_settingsFragment"
+                app:destination="@id/settingsFragment"/>
+        <action android:id="@+id/action_homeFragment_to_prodViewFragment" app:destination="@id/prodViewFragment"/>
+        <action android:id="@+id/action_homeFragment_to_accountFragment" app:destination="@id/accountFragment"
+        />
+        <action android:id="@+id/action_homeFragment_to_cartFragment" app:destination="@id/cartFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/settingsFragment"
+              android:name="com.tverd.foodmarket.presentation.settings.SettingsFragment"
+              android:label="Настройки"
+              tools:layout="@layout/fragment_settings"/>
+    <fragment android:id="@+id/prodViewFragment"
+              android:name="com.tverd.foodmarket.presentation.prodview.ProdViewFragment"
+              android:label="Продукт" tools:layout="@layout/fragment_prod_view">
+        <argument android:name="prod_id" app:argType="integer" android:defaultValue="1"/>
+        <action android:id="@+id/action_prodViewFragment_to_orderFragment" app:destination="@id/orderFragment"/>
+    </fragment>
+    <fragment android:id="@+id/accountFragment" android:name="com.tverd.foodmarket.presentation.account.AccountFragment"
+              android:label="Профиль" tools:layout="@layout/fragment_account">
+        <action android:id="@+id/action_accountFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_accountFragment_to_registrationFragment"
+                app:destination="@id/registrationFragment"/>
+    </fragment>
+    <fragment android:id="@+id/loginFragment" android:name="com.tverd.foodmarket.presentation.login.LoginFragment"
+              android:label="Вход" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_registrationFragment"
+                app:destination="@id/registrationFragment"/>
+        <action android:id="@+id/action_loginFragment_to_accountFragment" app:destination="@id/accountFragment"/>
+    </fragment>
+    <fragment android:id="@+id/registrationFragment"
+              android:name="com.tverd.foodmarket.presentation.registration.RegistrationFragment"
+              android:label="fragment_registration" tools:layout="@layout/fragment_registration">
+        <action android:id="@+id/action_registrationFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+    </fragment>
+    <fragment android:id="@+id/cartFragment" android:name="com.tverd.foodmarket.presentation.cart.CartFragment"
+              android:label="Корзина" tools:layout="@layout/fragment_cart">
+        <action android:id="@+id/action_cartFragment_to_orderFragment" app:destination="@id/orderFragment"/>
+        <action android:id="@+id/action_cartFragment_to_prodViewFragment" app:destination="@id/prodViewFragment"/>
+    </fragment>
+    <fragment android:id="@+id/orderFragment" android:name="com.tverd.foodmarket.presentation.order.OrderFragment"
+              android:label="Заказ" tools:layout="@layout/fragment_order">
+        <argument android:name="from" app:argType="integer"/>
+        <argument android:name="id" app:argType="integer"/>
+        <action android:id="@+id/action_orderFragment_to_homeFragment" app:destination="@id/homeFragment"/>
+    </fragment>
+
+
+</navigation>

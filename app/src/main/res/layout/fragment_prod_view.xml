@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".presentation.prodview.ProdViewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+        <ImageView
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/prodImg" />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/prodImg"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="20sp"
+                android:id="@+id/prodName"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="20dp" />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/prodName"
+                app:layout_constraintLeft_toRightOf="@+id/prodImg"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/prodPrice" />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tableL"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="inherit"
+                android:id="@+id/prodDesc" />
+
+        <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/prodPrice"
+                app:layout_constraintLeft_toRightOf="@+id/prodImg"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/tableL">
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/prodCount"
+                    app:min="1"
+                    app:max="999"
+                    app:unit="1"
+                    android:textSize="20sp"
+                    app:focusable="false"
+                    android:gravity="center"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="В корзину"
+                    android:textSize="20sp"
+                    android:id="@+id/btnAddToCart"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Купить"
+                    android:textSize="20sp"
+                    android:id="@+id/btnBuy" />
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
